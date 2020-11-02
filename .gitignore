@@ -1,2 +1,5 @@
 # Ignore secret files
 *.secret.*
+
+# Ignore uncompressed data files
+*.csv
