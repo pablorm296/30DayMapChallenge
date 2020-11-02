@@ -3,6 +3,7 @@
 
 # Ignore uncompressed data files
 *.csv
+02_Lines/Data/SHP/*
 
 # Ignore R files
 .Rproj.user
