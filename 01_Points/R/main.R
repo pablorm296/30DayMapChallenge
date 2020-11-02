@@ -8,8 +8,12 @@ library(extrafont)
 # Clean workspace
 rm(list = ls()); gc()
 
+# Source theme
+source("Common/ggplot2_theme.R")
+
 ## 01: Load data ===============================================================
 
+# Make sure you uncompress the denue_inegi_09.csv.zip file!
 denue_data <- read.csv("01_Points/Data/denue_inegi_09.csv", encoding = "iso-8859-1", 
                        fileEncoding = "iso-8859-1")
 
@@ -54,10 +58,6 @@ denue_data_clean <- denue_data_clean %>%
 
 # Clean
 rm(list = ls(pattern = "special_case*"))
-
-# Is it Pulquería?
-denue_data_clean <- denue_data_clean %>%
-    mutate(Pulquería = if_else(str_detect(nom_estab, "PULQU"), "Pulquerías", "Otros bares y cantinas"))
 
 # Is it one of my fav places?
 
@@ -121,24 +121,6 @@ map <- ggplot() +
     theme_30DayMapChallenge_black() 
 
 # # # #
-# Plot pulquerías 
-# # # #
-mapPulque <- ggplot() +
-    geom_sf(colour = "#4a4a4a", alpha = 0.5, size = 0.5, data = osmMxData$osm_lines) +
-    geom_point(aes(x = longitud, y = latitud, colour = Pulquería), alpha = 0.5, size = 0.75, 
-               data = denue_data_clean) +
-    scale_colour_manual(values = c("Pulquerías" = "#09FBD3", "Otros bares y cantinas" = "#FFFFFF"),
-                        guide = guide_legend(title.position = "top",
-                                             keywidth = unit(1, units = "cm"),
-                                             keyheight = unit(1, units = "cm"),
-                                             override.aes = list(size = 3))) +
-    coord_sf(xlim = c(min_lon, max_lon), ylim = c(min_lat, max_lat)) + 
-    labs(title = "Bares, cantinas y pulquerías de la Ciudad de México",
-         colour = "Tipo de establecimiento",
-         caption = "#30DayMapChallenge\nDatos: INEGI (Directorio Estadístico Nacional de Unidades Económicas) y OpenStreetMap\nElaboración: Pablo Reyes Moctezuma (@_egbg_)") +
-    theme_30DayMapChallenge_black() 
-
-# # # #
 # Plot fav places
 # # # #
 mapFav <- ggplot() +
@@ -156,9 +138,14 @@ mapFav <- ggplot() +
 
 ## 05: Save maps ===============================================================
 
+# High res maps
 ggsave("01_Points/Out/01_todos.png", map, width = 16.255, height = 18.29, 
        dpi = 600, units = "cm", limitsize = F, bg = "#2d2d2d", scale = 1.5)
-ggsave("01_Points/Out/02_pulquerías.png", mapPulque, width = 16.255, height = 18.29, 
+ggsave("01_Points/Out/02_favoritos.png", mapFav, width = 16.255, height = 18.29, 
        dpi = 600, units = "cm", limitsize = F, bg = "#2d2d2d", scale = 1.5)
-ggsave("01_Points/Out/03_favoritos.png", mapFav, width = 16.255, height = 18.29, 
-       dpi = 600, units = "cm", limitsize = F, bg = "#2d2d2d", scale = 1.5)
+
+# Web friendly
+ggsave("01_Points/Out/03_todos.jpeg", map, width = 16.255, height = 18.29, 
+       dpi = 600, units = "cm", limitsize = F, bg = "#2d2d2d", scale = 1.5, quality = 75)
+ggsave("01_Points/Out/04_favoritos.jpeg", mapFav, width = 16.255, height = 18.29, 
+       dpi = 600, units = "cm", limitsize = F, bg = "#2d2d2d", scale = 1.5, quality = 75)
