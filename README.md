@@ -1,5 +1,5 @@
 <div align="center">
-# #30DayMapChallenge
+&nbsp;#30DayMapChallenge &nbsp;
 </div>
 
 <div align="center">
