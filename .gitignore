@@ -3,3 +3,7 @@
 
 # Ignore uncompressed data files
 *.csv
+
+# Ignore R files
+.Rproj.user
+.Rhistory
