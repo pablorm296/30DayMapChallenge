@@ -44,3 +44,26 @@ theme_30DayMapChallenge_black_reduced <- function(...) {
             ...
         )
 }
+
+theme_30DayMapChallenge_clear <- function(...) {
+    theme_minimal() %+replace% 
+        theme(
+            text = element_text(family = "Montserrat", colour = "#22211d"),
+            title = element_text(family = "Montserrat", colour = "#22211d"),
+            plot.subtitle = element_text(size = 16, hjust = 0.5,
+                                         margin = margin(t = 10, b = 10, unit = "pt")),
+            plot.title = element_text(hjust = 0.5, size = 20, family = "Keep Calm Med",
+                                      margin = margin(t = 10, b = 10, unit = "pt")),
+            legend.title = element_text(size = 14),
+            axis.text = element_blank(),
+            axis.title = element_blank(),
+            plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), units = "cm"),
+            plot.background = element_rect(fill = "#f5f5f2", colour = NA),
+            panel.background = element_rect(fill = "#f5f5f2", colour = NA),
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
+            plot.caption = element_text(size = 9, lineheight = 1, hjust = 1),
+            legend.position = "bottom",
+            ...
+        )
+}
