@@ -23,3 +23,9 @@ I used data from the INEGI's Origin-Destination survey (2017) and OpenStreetMap 
 ![./01_Lines/Out/04_combinado.jpeg](https://github.com/pablorm296/30DayMapChallenge/blob/master/01_Lines/Out/04_combinado.jpeg)
 
 ## Day 3: [Polygons](https://github.com/pablorm296/30DayMapChallenge/tree/master/02_Polygons)
+
+I plotted zoning, year of last renovation (or year of construction), and land value per square meter in my home alcaldía (Iztapalapa) in Mexico City.
+
+I used Mexico City's Open Geographic Information System.
+
+![./03_Polygons/Out/05_valor.jpeg](https://github.com/pablorm296/30DayMapChallenge/blob/master/03_Polygons/Out/05_valor.jpeg)
