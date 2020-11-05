@@ -3,6 +3,7 @@
 
 # Ignore uncompressed data files
 *.csv
+03_Polygons/Data/SHP/*
 
 # Ignore R files
 .Rproj.user
