@@ -13,3 +13,13 @@ I plotted all bars, pubs, and [pulquerías](https://en.wikipedia.org/wiki/Pulque
 Maybe not all bar, pubs, and pulquerías in Mexico City are actually plotted here, since I found some errors in the database, but I did my best.
 
 ![./01_Points/Out/03_todos.jpeg](https://github.com/pablorm296/30DayMapChallenge/blob/master/01_Points/Out/03_todos.jpeg)
+
+## Day 2: [Lines](https://github.com/pablorm296/30DayMapChallenge/tree/master/02_Lines)
+
+I plotted commuting links made inside Mexico City using exclusively three means of transport: bicycle, subway, and car.
+
+I used data from the INEGI's Origin-Destination survey (2017) and OpenStreetMap —for the road layout.
+
+![./01_Lines/Out/04_combinado.jpeg](https://github.com/pablorm296/30DayMapChallenge/blob/master/01_Lines/Out/04_combinado.jpeg)
+
+## Day 3: [Polygons](https://github.com/pablorm296/30DayMapChallenge/tree/master/02_Polygons)
