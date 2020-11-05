@@ -20,7 +20,7 @@ I plotted commuting links made inside Mexico City using exclusively three means 
 
 I used data from the INEGI's Origin-Destination survey (2017) and OpenStreetMap —for the road layout.
 
-![./02_Lines/Out/04_combinado.jpeg](https://github.com/pablorm296/30DayMapChallenge/blob/master/02_Lines/Out/04_combinado.jpeg)
+![./02_Lines/Out/04_combinado.jpeg](https://github.com/pablorm296/30DayMapChallenge/blob/master/02_Lines/Out/08_combinado.jpeg)
 
 ## Day 3: [Polygons](https://github.com/pablorm296/30DayMapChallenge/tree/master/02_Polygons)
 
