@@ -4,6 +4,8 @@
 # Ignore uncompressed data files
 *.csv
 03_Polygons/Data/SHP/*
+05_Blue/Data/*.kml
+05_Blue/Data/*.geojson
 
 # Ignore R files
 .Rproj.user
