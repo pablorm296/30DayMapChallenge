@@ -69,12 +69,13 @@ map_simple <- riesgo_ageb_fortify %>%
         direction = "horizontal",
         title.position = 'top',
         title.hjust = 0.5,
-        label.hjust = 0.5, 
+        label.hjust = 0.5
     )) +
     coord_sf() +
     labs(title = "Porcentaje de área inundable por AGEB",
          subtitle = "Ciudad de México",
-         fill = "Porcentaje de área inundable") +
+         fill = "Porcentaje de área inundable",
+         caption = "#30DayMapChallenge\nDatos: ADIP (Indicador de inundaciones del módulo de peligros del Atlas de riegos de la Ciudad de México),\nCONAGUA y OpenStreetMap\nElaboración: Pablo Reyes Moctezuma") +
     theme_30DayMapChallenge_black()
 
 ## ## ##
@@ -103,7 +104,8 @@ map_lago <- riesgo_ageb_fortify %>%
     labs(title = "Porcentaje de área inundable por AGEB",
          subtitle = "Ciudad de México",
          colour = "Cuencas",
-         fill = "Porcentaje de área inundable") +
+         fill = "Porcentaje de área inundable",
+         caption = "#30DayMapChallenge\nDatos: ADIP (Indicador de inundaciones del módulo de peligros del Atlas de riegos de la Ciudad de México),\nCONAGUA y OpenStreetMap\nElaboración: Pablo Reyes Moctezuma") +
     theme_30DayMapChallenge_black()
 
 ## 05: Save maps ===============================================================
