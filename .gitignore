@@ -6,6 +6,8 @@
 03_Polygons/Data/SHP/*
 05_Blue/Data/*.kml
 05_Blue/Data/*.geojson
+06_Red/Data/FireData/*
+06_Red/Data/MexAdmin/*
 
 # Ignore R files
 .Rproj.user
