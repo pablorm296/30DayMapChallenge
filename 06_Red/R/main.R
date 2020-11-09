@@ -59,10 +59,31 @@ map_simple <- ggplot() +
     theme_30DayMapChallenge_clear()
 
 
+## ## ##
+## Simple map simple caption
+map_simple_no_caption <- ggplot() +
+    geom_polygon(aes(x = long, y = lat, group = group), data = mexico_admin_fortify, fill = "#808080") +
+    geom_point(aes(x = LONGITUDE, y = LATITUDE, size = FRP), data = points_in_mexico,
+               alpha = 0.5, colour = "#FF6666") +
+    scale_size(range = c(0.5, 5), guide = guide_legend(
+        direction = "horizontal",
+        title.position = 'top',
+        title.hjust = 0.5,
+        label.hjust = 0.5
+    )) +
+    labs(title = "Incendios registrados en México durante los úlitmos 7 días",
+         size = "Fire Radiative Power",
+         caption = "Datos del 1 al 7 de noviembre de 2020\nDatos: NASA (VIIRS I-Band 375 m Active Fire Data)") +
+    coord_equal() +
+    theme_30DayMapChallenge_clear()
+
+
 ## 04: Save maps ===============================================================
 
 # High res maps
 ggsave("06_Red/Out/01_simple.png", map_simple, width = 16.255, height = 18.29, 
+       dpi = 600, units = "cm", limitsize = F, bg = "#f5f5f2", scale = 1.5)
+ggsave("06_Red/Out/01_simple_no_caption.png", map_simple_no_caption, width = 16.255, height = 18.29, 
        dpi = 600, units = "cm", limitsize = F, bg = "#f5f5f2", scale = 1.5)
 
 # Web friendly
